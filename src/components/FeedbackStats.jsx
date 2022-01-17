@@ -1,3 +1,5 @@
+import { PropTypes } from 'prop-types'
+
 function FeedbackStats({ feedback }) {
   // function calculate rating average
   let average =
@@ -13,6 +15,10 @@ function FeedbackStats({ feedback }) {
       <h4>Average rating: {isNaN(average) ? 0 : average}</h4>
     </div>
   )
+}
+
+FeedbackStats.propTypes = {
+  feedback: PropTypes.array.isRequired,
 }
 
 export default FeedbackStats
