@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid'
 const FeedbackContext = createContext()
 
 export const FeedbackProvider = ({ children }) => {
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setisLoading] = useState(true)
 
   const [feedback, setFeedback] = useState([])
 
@@ -24,7 +24,7 @@ export const FeedbackProvider = ({ children }) => {
     )
     const data = await response.json()
     setFeedback(data)
-    setIsLoading = false
+    setisLoading(false)
   }
 
   // delete feedback
